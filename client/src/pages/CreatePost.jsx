@@ -18,7 +18,7 @@ const CreatePost = () => {
         if (form.prompt) {
             try {
                 setGeneratingImg(true);
-                const response = await fetch('http://localhost:8080/api/v1/dalle', {
+                const response = await fetch('https://imagegen-backend.onrender.com', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const CreatePost = () => {
             try {
                 console.log('Form data being sent:', form);
 
-                const response = await fetch('http://localhost:8080/api/v1/post', {
+                const response = await fetch('https://imagegen-backend.onrender.com', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

@@ -1,6 +1,5 @@
 import React from 'react'
-import { preview } from '../assets'
-import Loader from './Loader'
+
 
 const FormField = ({ LableName, type, name, placeholder, value, handleChange, isSurpriseMe, handleSurpriseMe}) => {
   return (
