@@ -15,14 +15,14 @@ app.use('/api/v1/post', postRoutes);
 app.use('/api/v1/dalle', dalleRoutes)
 
 app.get('/', async (req,res)=>{
-    res.send('hello');
+    res.send('hello, welcome to api!');
 })
-
+const port = process.env.PORT || 8080
 const startServer =async () =>{
     try{
        connectDB(process.env.MONGODB_URL);
-       app.listen(8080, ()=>
-        console.log('Server has stared on port http://localhost:8080'))
+       app.listen(port, ()=>
+        console.log('Server has stared on port http://localhost:${port}'))
     } catch(error){
        console.log(error);
     }
